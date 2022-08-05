@@ -3,10 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "dev": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +21,9 @@
     "nodemon": "^2.0.19"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.1",
-    "mysql": "^2.18.1"
+    "knex": "^2.2.0",
+    "mysql2": "^2.3.3"
   }
 }
