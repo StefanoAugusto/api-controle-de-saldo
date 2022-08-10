@@ -1,4 +1,5 @@
 const database = require('../database/connection.js')
+const knex = require("knex");
 
 class ReceController {
     async novaReceita(request, response) {
@@ -16,7 +17,23 @@ class ReceController {
         }
     }
 
+    async selectReceitaPorMes(request, response) {
+        const { mes } = request.params
+        const { ano } = request.params
+        let receitaPorMes = await database('receitas').select().andWhereRaw(`Month(dia) = ?`, [mes]).andWhereRaw(`Year(dia) = ?`, [ano])
+        return response.status(200).json({ receitaPorMes })
+    }
+
     async selectAllReceitas(request, response) {
+        const { descricao } = request.query
+        if (descricao) {
+            try {
+                const procuraDescricaoReceita = await database('receitas').select().where('descricao','rlike', descricao)
+                return response.status(200).json({ procuraDescricaoReceita })
+            } catch (error) {
+                return response.status(500).json({ Mensagem: "Algo deu errado (500)" })
+            }
+        }
         let allReceitas = await database.select("*").table("receitas")
         return response.status(200).json({ allReceitas })
     }
