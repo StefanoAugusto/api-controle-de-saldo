@@ -28,7 +28,7 @@ class ReceController {
         const { descricao } = request.query
         if (descricao) {
             try {
-                const procuraDescricaoReceita = await database('receitas').select().where('descricao','rlike', descricao)
+                const procuraDescricaoReceita = await database('receitas').select().where('descricao', 'rlike', descricao)
                 return response.status(200).json({ procuraDescricaoReceita })
             } catch (error) {
                 return response.status(500).json({ Mensagem: "Algo deu errado (500)" })

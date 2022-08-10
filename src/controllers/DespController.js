@@ -16,18 +16,18 @@ class DespController {
         }
     }
 
-    async selectDespesaPorMes(request, response){
-        const {mes} = request.params
-        const {ano} = request.params
+    async selectDespesaPorMes(request, response) {
+        const { mes } = request.params
+        const { ano } = request.params
         let despesaPorMes = await database('despesas').select().andWhereRaw(`Month(dia) = ?`, [mes]).andWhereRaw(`Year(dia) = ?`, [ano])
-        return response.status(200).json({ despesaPorMes})
+        return response.status(200).json({ despesaPorMes })
     }
 
     async selectAllDespesas(request, response) {
         const { descricao } = request.query
         if (descricao) {
             try {
-                const procuraDescricaoDespesa = await database('despesas').select().where('descricao','rlike', descricao)
+                const procuraDescricaoDespesa = await database('despesas').select().where('descricao', 'rlike', descricao)
                 return response.status(200).json({ procuraDescricaoDespesa })
             } catch (error) {
                 return response.status(500).json({ Mensagem: "Algo deu errado (500)" })
