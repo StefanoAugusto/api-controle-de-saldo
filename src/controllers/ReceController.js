@@ -1,5 +1,4 @@
 const database = require('../database/connection.js')
-const knex = require("knex");
 
 class ReceController {
     async novaReceita(request, response) {
