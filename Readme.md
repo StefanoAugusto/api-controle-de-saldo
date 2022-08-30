@@ -17,5 +17,12 @@ Serviço de autenticação/autorização para restringir acesso às informaçõe
 Temos um período de tempo de 4 semanas para desenvolver o projeto. Nas 3 primeiras, teremos tarefas a serem feitas e a última semana para ajustes ou para completar as tarefas pendentes.
 
 ## Primeira Semana 
-Nessa primeira semana, os requisitos eram implementar uma API implementando nela o CRUD de receitas e despesas, seguindo algumas validações e regras de negócios. Também deveria ser implementado uma base de dados para a persistência das informações.
+Na primeira semana, os requisitos eram implementar uma API implementando nela o CRUD de receitas e despesas, seguindo algumas validações e regras de negócios. Também deveria ser implementado uma base de dados para a persistência das informações.
 Eu desenvolvi a minha solução utilizando NodeJS com Knex e Express, para o banco de dados utilizei o MySQL. Tive algumas dificuldades por ser o primeiro projeto que trabalhei de forma independente, saindo da teoria para a prática.
+
+## Segunda Semana
+Na segunda semana, foi solicitado a categorização das despesas e, consequentemente, a alteração no banco de dados. Também foi solicitado a busca de receitas e despesas, podendo fazer sua listagem por mês e também o resumo mensal.
+
+## Terceira e Quarta Semana
+Na terceira e quarta semanas deve ser implementado um mecanismo de autenticação na API, para apenas usuários autenticados possam interagir. Além disso, também é necessário fazer o deploy da API.
+Atualmente eu estou atrasado com o projeto, pois tive algumas dificuldades com a implementação da API e estou buscando adequar a API nas boas práticas da programação.
