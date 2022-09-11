@@ -7,4 +7,4 @@ var knex = require('knex')({
         database : 'api_banco'
      }
 });
-module.exports = knex
+module.exports = knex;

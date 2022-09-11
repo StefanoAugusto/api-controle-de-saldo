@@ -1,4 +1,4 @@
-const database = require('../database/connection.js')
+const database = require('../database/connection.js');
 
 class ReceController {
     async novaReceita(request, response) {
@@ -67,4 +67,4 @@ class ReceController {
     }
 }
 
-module.exports = new ReceController()
+module.exports = new ReceController();

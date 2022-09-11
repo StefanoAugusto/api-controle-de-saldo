@@ -19,4 +19,4 @@ class ResuController {
     }
 }
 
-module.exports = new ResuController()
+module.exports = new ResuController();

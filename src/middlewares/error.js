@@ -8,4 +8,4 @@ const errorMiddleWare = (error, request, response, next) => {
       next();
 }
 
-module.exports = {errorMiddleWare}
+module.exports = {errorMiddleWare};
