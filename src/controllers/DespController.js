@@ -1,4 +1,4 @@
-const database = require('../database/connection.js')
+const database = require('../database/connection.js');
 
 class DespController {
     async novaDespesa(request, response) {
@@ -74,4 +74,4 @@ class DespController {
     }
 }
 
-module.exports = new DespController()
+module.exports = new DespController();
