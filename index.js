@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const { errorMiddleWare } = require('./src/middlewares/error.js');
 const router = require('./src/routes/routes.js');
-const { eAdmin, userId } = require('./src/middlewares/auth.js');
+const { eAdmin } = require('./src/middlewares/auth.js');
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -17,5 +17,5 @@ app.listen(port, () => {
 });
 
 app.get('/', eAdmin, (request, response) => {
-    return response.status(200).json({Mensagem: "Challenge Back End 4", usuario: request.userId})
+    return response.status(200).json({ Mensagem: "Challenge Back End 4", usuario: request.userId })
 });
